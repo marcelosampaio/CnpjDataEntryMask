@@ -12,6 +12,8 @@
 		9C5D7E4221E1219C0077F905 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C5D7E4021E1219C0077F905 /* Main.storyboard */; };
 		9C5D7E4421E121AE0077F905 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C5D7E4321E121AE0077F905 /* Assets.xcassets */; };
 		9C5D7E4721E121AE0077F905 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C5D7E4521E121AE0077F905 /* LaunchScreen.storyboard */; };
+		9C5D7E4F21E124C10077F905 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5D7E4E21E124C10077F905 /* String+Utils.swift */; };
+		9C5D7E5221E124F30077F905 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5D7E5121E124F30077F905 /* UIView+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		9C5D7E4321E121AE0077F905 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C5D7E4621E121AE0077F905 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C5D7E4821E121AE0077F905 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C5D7E4E21E124C10077F905 /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		9C5D7E5121E124F30077F905 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				9C5D7E4321E121AE0077F905 /* Assets.xcassets */,
 				9C5D7E4521E121AE0077F905 /* LaunchScreen.storyboard */,
 				9C5D7E4821E121AE0077F905 /* Info.plist */,
+				9C5D7E4E21E124C10077F905 /* String+Utils.swift */,
+				9C5D7E5121E124F30077F905 /* UIView+Utils.swift */,
 			);
 			path = CnpjDataEntryMask;
 			sourceTree = "<group>";
@@ -137,6 +143,8 @@
 			files = (
 				9C5D7E3F21E1219C0077F905 /* ViewController.swift in Sources */,
 				9C5D7E3D21E1219C0077F905 /* AppDelegate.swift in Sources */,
+				9C5D7E5221E124F30077F905 /* UIView+Utils.swift in Sources */,
+				9C5D7E4F21E124C10077F905 /* String+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +291,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5NC5X2493;
 				INFOPLIST_FILE = CnpjDataEntryMask/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +309,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5NC5X2493;
 				INFOPLIST_FILE = CnpjDataEntryMask/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
