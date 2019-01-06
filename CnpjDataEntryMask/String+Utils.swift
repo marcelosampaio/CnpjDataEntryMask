@@ -135,8 +135,69 @@ extension String {
     }
     
     func isValidCnpj() -> Bool {
+        let cnpj = self.trimmingCharacters(in: .whitespacesAndNewlines)
+        var cnpjClean = cnpj.replacingOccurrences(of: ".", with: "")
+        cnpjClean = cnpjClean.replacingOccurrences(of: "-", with: "")
+        cnpjClean = cnpjClean.replacingOccurrences(of: "/", with: "")
         
+        if cnpjClean.isEmpty {
+            return false
+        }
         
+        var i = 0
+        var firstSum = 0
+        var secondSum = 0
+        var firstDigit = 0
+        var secondDigit = 0
+        var firstDigitCheck = 0
+        var secondDigitCheck = 0
+        
+        let firstMultipliers : [Int] = [5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
+        let secondMultipliers : [Int] = [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
+        
+        for character in cnpjClean {
+            
+            let value = Int(character.description) ?? 0
+            
+            // step 1
+            if i <= 11 {
+                let sumarizer = (value * firstMultipliers[i])
+                firstSum += sumarizer
+            }
+            // step2
+            if i <= 12 {
+                let sumarizer = (value * secondMultipliers[i])
+                secondSum += sumarizer
+            }
+            //
+            if i == 12 {
+                firstDigitCheck = value
+            }else if i == 13 {
+                secondDigitCheck = value
+            }
+            // digit control
+            i = i + 1
+        }
+        // with firstSum I'll get firstDigit
+        if (firstSum % 11 < 2) {
+            firstDigit = 0;
+        }
+        else {
+            firstDigit = 11 - (firstSum % 11);
+        }
+        
+        // with secondSum I'll get secondDigit
+        if (secondSum % 11 < 2) {
+            secondDigit = 0;
+        }
+        else {
+            secondDigit = 11 - (secondSum % 11)
+        }
+        
+        // validate digits
+        if ((firstDigit == firstDigitCheck) && (secondDigit == secondDigitCheck)) {
+            return true;
+        }
         
        return false
     }
