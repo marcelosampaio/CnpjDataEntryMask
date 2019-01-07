@@ -140,7 +140,7 @@ extension String {
         cnpjClean = cnpjClean.replacingOccurrences(of: "-", with: "")
         cnpjClean = cnpjClean.replacingOccurrences(of: "/", with: "")
         
-        if cnpjClean.isEmpty {
+        if cnpjClean.isEmpty || cnpjClean == "00000000000000" {
             return false
         }
         
